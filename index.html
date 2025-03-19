@@ -1,39 +1,300 @@
-/* index.html */
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <h1>Instagram</h1>
-    </nav>
     <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <li>Home</li>
-                <li>Search</li>
-                <li>Notifications</li>
-                <li>Messages</li>
-                <li>Profile</li>
-            </ul>
-        </aside>
-        <main class="feed">
-            <div class="post">
-                <h3>User 1</h3>
-                <img src="https://via.placeholder.com/500" alt="Post Image">
-                <p>Caption for the post</p>
+        <!-- Left Sidebar - Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>Instagram</h1>
             </div>
-            <div class="post">
-                <h3>User 2</h3>
-                <img src="https://via.placeholder.com/500" alt="Post Image">
-                <p>Another caption for a post</p>
+            <div class="nav-links">
+                <div class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-compass"></i>
+                    <span>Explore</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-film"></i>
+                    <span>Reels</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Messages</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Notifications</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-plus-square"></i>
+                    <span>Create</span>
+                </div>
+                <div class="nav-item">
+                    <img src="/api/placeholder/32/32" alt="profile" class="profile-pic" />
+                    <span>Profile</span>
+                </div>
             </div>
-        </main>
+            <div class="more-options nav-item">
+                <i class="fas fa-bars"></i>
+                <span>More</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Stories -->
+            <div class="stories-container">
+                <div class="story">
+                    <div class="story-avatar">
+                        <img src="/api/placeholder/60/60" alt="story">
+                        <div class="add-story">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <span>Your Story</span>
+                </div>
+                <div class="story">
+                    <div class="story-avatar">
+                        <img src="/api/placeholder/60/60" alt="story">
+                    </div>
+                    <span>user1</span>
+                </div>
+                <div class="story">
+                    <div class="story-avatar">
+                        <img src="/api/placeholder/60/60" alt="story">
+                    </div>
+                    <span>user2</span>
+                </div>
+                <div class="story">
+                    <div class="story-avatar">
+                        <img src="/api/placeholder/60/60" alt="story">
+                    </div>
+                    <span>user3</span>
+                </div>
+                <div class="story">
+                    <div class="story-avatar">
+                        <img src="/api/placeholder/60/60" alt="story">
+                    </div>
+                    <span>user4</span>
+                </div>
+                <div class="story">
+                    <div class="story-avatar">
+                        <img src="/api/placeholder/60/60" alt="story">
+                    </div>
+                    <span>user5</span>
+                </div>
+            </div>
+
+            <!-- Feed -->
+            <div class="feed">
+                <!-- Post 1 -->
+                <div class="post">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="/api/placeholder/32/32" alt="user" class="post-user-avatar">
+                            <div class="post-user-info">
+                                <span class="post-username">username1</span>
+                                <span class="post-location">New York, NY</span>
+                            </div>
+                        </div>
+                        <div class="post-more">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <img src="/api/placeholder/600/400" alt="post">
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-actions-left">
+                            <i class="far fa-heart"></i>
+                            <i class="far fa-comment"></i>
+                            <i class="far fa-paper-plane"></i>
+                        </div>
+                        <div class="post-actions-right">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="post-likes">
+                        <span>1,234 likes</span>
+                    </div>
+                    <div class="post-caption">
+                        <span class="post-username">username1</span>
+                        <span class="caption-text">This is a beautiful day in New York City! #nyc #travel</span>
+                    </div>
+                    <div class="post-comments">
+                        <span class="view-comments">View all 87 comments</span>
+                        <div class="post-comment">
+                            <span class="post-username">user2</span>
+                            <span class="comment-text">Amazing photo!</span>
+                        </div>
+                        <div class="post-comment">
+                            <span class="post-username">user3</span>
+                            <span class="comment-text">I was there last week!</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        <span>2 HOURS AGO</span>
+                    </div>
+                    <div class="add-comment">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Add a comment...">
+                        <button class="post-comment-btn">Post</button>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="post">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="/api/placeholder/32/32" alt="user" class="post-user-avatar">
+                            <div class="post-user-info">
+                                <span class="post-username">username2</span>
+                                <span class="post-location">Paris, France</span>
+                            </div>
+                        </div>
+                        <div class="post-more">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <img src="/api/placeholder/600/400" alt="post">
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-actions-left">
+                            <i class="far fa-heart"></i>
+                            <i class="far fa-comment"></i>
+                            <i class="far fa-paper-plane"></i>
+                        </div>
+                        <div class="post-actions-right">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="post-likes">
+                        <span>2,543 likes</span>
+                    </div>
+                    <div class="post-caption">
+                        <span class="post-username">username2</span>
+                        <span class="caption-text">Exploring the beautiful streets of Paris! #paris #travel</span>
+                    </div>
+                    <div class="post-comments">
+                        <span class="view-comments">View all 156 comments</span>
+                        <div class="post-comment">
+                            <span class="post-username">user4</span>
+                            <span class="comment-text">I miss Paris so much!</span>
+                        </div>
+                        <div class="post-comment">
+                            <span class="post-username">user5</span>
+                            <span class="comment-text">Great photo!</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        <span>5 HOURS AGO</span>
+                    </div>
+                    <div class="add-comment">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Add a comment...">
+                        <button class="post-comment-btn">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar - Suggestions -->
+        <div class="right-sidebar">
+            <div class="user-profile">
+                <img src="/api/placeholder/60/60" alt="profile" class="user-avatar">
+                <div class="user-info">
+                    <span class="username">your_username</span>
+                    <span class="name">Your Name</span>
+                </div>
+                <a href="#" class="switch-link">Switch</a>
+            </div>
+
+            <div class="suggestions">
+                <div class="suggestions-header">
+                    <span class="suggestions-text">Suggestions For You</span>
+                    <a href="#" class="see-all">See All</a>
+                </div>
+
+                <div class="suggestion-item">
+                    <img src="/api/placeholder/44/44" alt="suggestion" class="suggestion-avatar">
+                    <div class="suggestion-info">
+                        <span class="suggestion-username">suggested_user1</span>
+                        <span class="suggestion-relation">Followed by user3 + 5 more</span>
+                    </div>
+                    <a href="#" class="follow-link">Follow</a>
+                </div>
+
+                <div class="suggestion-item">
+                    <img src="/api/placeholder/44/44" alt="suggestion" class="suggestion-avatar">
+                    <div class="suggestion-info">
+                        <span class="suggestion-username">suggested_user2</span>
+                        <span class="suggestion-relation">Followed by user1 + 2 more</span>
+                    </div>
+                    <a href="#" class="follow-link">Follow</a>
+                </div>
+
+                <div class="suggestion-item">
+                    <img src="/api/placeholder/44/44" alt="suggestion" class="suggestion-avatar">
+                    <div class="suggestion-info">
+                        <span class="suggestion-username">suggested_user3</span>
+                        <span class="suggestion-relation">New to Instagram</span>
+                    </div>
+                    <a href="#" class="follow-link">Follow</a>
+                </div>
+
+                <div class="suggestion-item">
+                    <img src="/api/placeholder/44/44" alt="suggestion" class="suggestion-avatar">
+                    <div class="suggestion-info">
+                        <span class="suggestion-username">suggested_user4</span>
+                        <span class="suggestion-relation">Followed by user2 + 8 more</span>
+                    </div>
+                    <a href="#" class="follow-link">Follow</a>
+                </div>
+
+                <div class="suggestion-item">
+                    <img src="/api/placeholder/44/44" alt="suggestion" class="suggestion-avatar">
+                    <div class="suggestion-info">
+                        <span class="suggestion-username">suggested_user5</span>
+                        <span class="suggestion-relation">Follows you</span>
+                    </div>
+                    <a href="#" class="follow-link">Follow</a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-links">
+                    <a href="#">About</a> · 
+                    <a href="#">Help</a> · 
+                    <a href="#">Press</a> · 
+                    <a href="#">API</a> · 
+                    <a href="#">Jobs</a> · 
+                    <a href="#">Privacy</a> · 
+                    <a href="#">Terms</a> · 
+                    <a href="#">Locations</a> · 
+                    <a href="#">Language</a>
+                </div>
+                <div class="copyright">
+                    © 2025 INSTAGRAM FROM META
+                </div>
+            </div>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
